@@ -7,10 +7,18 @@
     */
     
     //Entrada
-
+    const refeicoes = Number(prompt (`Quanto você gasta diariamente em suas refeições?`));
+    const dias = Number( prompt(`Quantos dias da semana você faz reeições na sua universidade?`));
 
     //Processamento
+    let gasto = refeicoes * dias;
+    if ( gasto > 500 ) {
+        alert(`Está gastando demais, precisa rever seus gastos`);
 
+    }
+    else {
+        alert(`O custo da sua alimentação está dentro do esperado`);
+    }
 
     //Saída
 

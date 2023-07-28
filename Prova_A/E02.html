@@ -11,10 +11,25 @@
     */
     
     //Entrada
-
+    const salario = Number(prompt('Informe qual é seu salario Bruto')).replace(",",".")
+    const aux = Number(prompt(`Você deseja receber o auxilio transporte?(Responda com "S" para sim ou "N" para nao)`)).toLowercase()
 
     //Processamento
+    let desconto6 = salario * 6 / 100
 
+    if (salario < 2000) {
+        alert (`Não ha descontos, seu salário liquido é R$${salario}`).replace(",",".").trim(2);
+
+    }
+    if (salario >= 2000 && salario < 3500) {
+        alert (`Seu salário liquido é de R$${salario * 10 / 100}`).trim(2).replace(",",".")
+    }
+    if (salario >= 3500 && salario < 6000) {
+        alert (`Seu salário liquido é de ${salario * 20 / 100}`).trim(2)
+    }
+    else{
+        alert (`Seu salario liquido é de ${ salario * 30 / 100}`);
+    }
 
     //Saída
 
